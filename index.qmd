@@ -1,0 +1,12 @@
+---
+title: "test-quarto-blog"
+listing:
+  type: table
+  contents: posts
+  sort: "date desc"
+  categories: true
+  sort-ui: false
+  filter-ui: false
+page-layout: full
+title-block-banner: true
+---

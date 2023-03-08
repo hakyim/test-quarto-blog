@@ -1,0 +1,16 @@
+{
+  "hash": "e826a8f7ab1db8c2c3ad87cb32a68df2",
+  "result": {
+    "markdown": "---\ntitle: Test of something normal\nauthor: Haky Im\ndate: '2004-10-30'\nslug: test-of-something-normal\ncategories: []\ntags: []\n---\n\n\nThis is a histogram of 1000 independent normal random variables.\n\n\n::: {.cell}\n\n```{.r .cell-code}\nyy = rnorm(1000)\nhist(yy)\n```\n\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::\n\n\nI prefer more bins for the histogram\n\n\n::: {.cell}\n\n```{.r .cell-code}\nhist(yy, 50)\n```\n\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-2-1.png){width=672}\n:::\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\nxx = rnorm(1000)\nplot(xx,yy)\n```\n\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-3-1.png){width=672}\n:::\n:::\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,0 +1,19 @@
+---
+title: "Post With Code"
+author: "tester tester"
+date: "2023-02-11"
+categories: [news, code, analysis]
+image: "image.jpg"
+freeze: TRUE
+---
+
+This is a post with executable code.
+
+```{r}
+1 + 1
+```
+
+```{r}
+
+hist(rnorm(1000))
+```
