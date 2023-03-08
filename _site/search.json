@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code.\n\n1 + 1\n\n[1] 2\n\n\n\nhist(rnorm(1000))"
+  },
+  {
+    "objectID": "posts/2023-01-19-tfxcan-preliminary-data/index.html",
+    "href": "posts/2023-01-19-tfxcan-preliminary-data/index.html",
+    "title": "TFXcan preliminary data",
+    "section": "",
+    "text": "Based on Temi’s (FOXA1) TF prediction from DNAseq\nRead Temi’s data\n======= ## system(glue(\"open {DATA}\")) ## this will open the folder\nRead Temi’s data\n>>>>>>> ee1d5e03a5e1098ffb92aa0a139a5ee3bceb2afe\n======= hist(pvec)"
+  },
+  {
+    "objectID": "posts/2023-01-19-tfxcan-preliminary-data/index.html#permute-sites-for-observed",
+    "href": "posts/2023-01-19-tfxcan-preliminary-data/index.html#permute-sites-for-observed",
+    "title": "TFXcan preliminary data",
+    "section": "permute sites for observed",
+    "text": "permute sites for observed\nfor(pp in 1:4)\n{\nobs_perm <- obs[sample(1:nrow(obs),nrow(obs),replace=FALSE),]\npvec_perm = rep(NA,nrow(obs))\nfor(cc in 1:nrow(obs) ) \n{\n  res = t.test(pred[cc,obs_perm[cc,]==1], pred[cc,obs_perm[cc,]==0])\n  pvec_perm[cc] = res$p.value\n  }\n\ntitulo = glue(\"perm-{pp}:\")\nprint(titulo)\n##hist(pvec_perm,main=titulo)\nqqunif(pvec_perm,main=titulo)\nqqplot(-log10(pvec_perm), -log10(pvec), \n       main=paste(titulo ))\nabline(0,1)\npar(mfrow=c(1,1))\n\n}\n## perm-1:\n\n## perm-2:\n\n## perm-3:\n\n## perm-4:"
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "test-quarto-blog",
+    "section": "",
+    "text": "Date\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nFeb 11, 2023\n\n\nPost With Code\n\n\ntester tester\n\n\n\n\nFeb 8, 2023\n\n\nWelcome To My Blog\n\n\nTristan O’Malley\n\n\n\n\nJan 19, 2023\n\n\nTFXcan preliminary data\n\n\nHaky Im\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  }
+]
